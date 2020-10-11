@@ -1,0 +1,91 @@
+drop table PERSONS;
+
+CREATE TABLE Persons (
+    PersonID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+
+INSERT INTO Persons (PersonID, LastName, FirstName, address, City)
+VALUES (1459, 'Sanchez', 'Moises', '809 oceanviw', 'San MAteo');
+
+INSERT INTO Persons (PersonID, LastName, FirstName, address, City)
+VALUES (1449, 'Lara', 'ROb', '804 oceanviw', 'San Mateo');
+
+
+INSERT INTO Persons (PersonID, LastName, FirstName, address, City)
+VALUES (2449, 'Smith', 'Alex', '8994 ocean', 'San Luis');
+
+
+
+
+
+CREATE TABLE genre (
+genreid SERIAL NOT NULL PRIMARY KEY, 
+genrename VARCHAR(100) NOT NULL UNIQUE);
+
+CREATE TABLE title (
+titleid SERIAL NOT NULL PRIMARY KEY, 
+titlename VARCHAR(255) NOT NULL UNIQUE, 
+titleinfo VARCHAR(255) NOT NULL
+genreid SERIAL NOT NULL);
+
+ALTER TABLE title 
+ADD FOREIGN KEY (genreid) REFERENCES genre(genreid);
+CREATE TABLE genretitle (
+genreid SERIAL NOT NULL PRIMARY KEY, 
+titleid SERIAL NOT NULL);
+
+ALTER TABLE genretitle
+ADD FOREIGN KEY (titleid) REFERENCES title(titleid);
+ALTER TABLE genretitle 
+ADD FOREIGN KEY (genreid) REFERENCES genre(genreid);
+
+
+
+
+CREATE TABLE Orders (
+    OrderID int NOT NULL,
+    OrderNumber int NOT NULL,
+    PersonID int,
+    PRIMARY KEY (OrderID),
+    FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)
+);
+
+
+CREATE TABLE new_table_name AS
+    SELECT column1, column2,...
+    FROM existing_table_name
+    WHERE ....;
+
+
+    CREATE TABLE cities (
+        city     varchar(80) primary key,
+        location point
+);
+
+CREATE TABLE weather (
+        city      varchar(80) references cities(city),
+        temp_lo   int,
+        temp_hi   int,
+        prcp      real,
+        date      date
+);
+
+CREATE TABLE Customer (
+    ClientID int NOT NULL,
+    ClientName int NOT NULL,
+    LastNameID int,
+    PRIMARY KEY (ClientID),
+    CONSTRAINT FK_ClientOrder FOREIGN KEY (LastNameID)
+    REFERENCES Clients(LastNameID)
+);
+
+ALTER TABLE Customer
+ADD FOREIGN KEY ("29939") REFERENCES Clients("940455");
+
+
+
+drop FOREIGN KEY FK_ClientOrder;
