@@ -74,7 +74,12 @@
   </nav>
 </div>
 <!-- nav end-->
-	
+    
+
+
+<div id="form-main">
+
+  <div id="form-div">
 	<div id="search">
 		<h2>IQGREEN Product</h2>
 		<p></p>
@@ -96,7 +101,8 @@
 			
 		</form>
 	</div>
-
+    </div>
+    </div>
 
 </body>
 </html>

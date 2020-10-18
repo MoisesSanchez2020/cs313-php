@@ -85,7 +85,7 @@
 </div>
 <!-- nav end-->
 
-
+<div id="form-main">
 	<div>
 		<h2>Welcome to IQGreen</h2>
 		<p>Select the "Search" to look for your Fertilizer</p>
@@ -101,7 +101,7 @@
 	</div>
 
 
-
+    </div>
 
 
 
