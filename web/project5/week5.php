@@ -88,7 +88,8 @@
 <div id="form-main">
 
   <div id="form-div">
-    <form class="form" id="form1">
+  
+    <form  class="form" id="form1"  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
     <h2>Product Search</h2>
 
       <p class="name">
@@ -123,6 +124,47 @@
   </div>
 
 
+  <?php
+			    try
+		        {
+		        $dbUrl = getenv('DATABASE_URL');
+		        
+		        $dbOpts = parse_url($dbUrl);
+		        
+		        $dbHost = $dbOpts["host"];
+		        $dbPort = $dbOpts["port"];
+		        $dbUser = $dbOpts["user"];
+		        $dbPassword = $dbOpts["pass"];
+		        $dbName = ltrim($dbOpts["path"],'/');
+		        
+		        $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+		        
+		        $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		        }
+		        catch (PDOException $ex)
+		        {
+		        echo 'Error!: ' . $ex->getMessage();
+		        die();
+		        } 
+
+
+		        $bird = $_POST['name'];
+		        $city = $_POST['type'];
+		        $state = $_POST['price'];
+				
+				
+
+	if (!empty($soil)) {
+   foreach ($db->query('SELECT Soil.soilname, Fertilize.fertname, PestControl.pestnam  FROM Products INNER JOIN  soil  On Products.ProductNumber=Soil.ProductId ') as $row)
+					{
+						if ($_POST['name'] == $row['ProductName']) {
+							echo '<h3>' . $row['ProductName'] . '</h3><br>';
+					  		echo 'Producttype: ' . $row['ProductPrice'] . ', ' . $row['State'] . ', ' . $row['Country'] . '<br>';
+					  		echo 'Date: ' . $row['Fertilize'] . '<br>';
+						}
+					}
+		        }
+			?>
 
 
 
