@@ -85,6 +85,10 @@
 </div>
 <!-- nav end-->
 
+
+
+
+  <div id="form-div">
 <div id="form-main">
 	<div>
 		<h2>Welcome to IQGreen</h2>
@@ -103,7 +107,7 @@
 
     </div>
 
-
+    </div>
 
 
 <script src="nav.js"></script>
