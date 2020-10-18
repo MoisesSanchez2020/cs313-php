@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css?family=Lato)
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic)
+@import "compass/css3"
+
+$dodger-blue: #19B5FE
+
+*
+  box-sizing: border-box
+
+body
+  background-color: $dodger-blue
+  color: #fff
+  font-family: 'Lato', sans-serif 
+
+form
+  @include transition(all, 0.5s)
+  position: relative
+  margin: 40vh auto 0vh
+  width: 390px
+  
+input
+  color: #181818
+  height: 30px
+  max-width: 300px
+  border: none
+  padding: 1px 15px
+  text-align: right
+
+button
+  height: 29px
+  width: 80px
+  background-color: #fff
+  color: $dodger-blue
+  border: none
+  border-radius: 5px
+  &:focus
+    outline: none
+
+#random-button
+    
+#data
+  width: 60vw
+  margin: 5vh auto
+  
+#search-item
+  font-family: 'Roboto', sans-serif
+  margin: 30px 0px
+  padding: 30px
+  background-color: #fff
+  color: #181818
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1)
+  p
+    line-height: 1.4
+
+a
+  color: $dodger-blue
+  text-decoration: none
+
+.black-button
+  background-color: #000
+  color: #fff
+
+.open
+  margin-top: 10vh
+
+.display-none
+  display: none
+  
+.typed-cursor
+  opacity: .5
+  animation: blink 1.2s infinite
+  
+@keyframes blink
+  0%
+    opacity: 1
+  50%
+    opacity: 0
+  100%
+    opacity: 1

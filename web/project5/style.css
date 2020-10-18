@@ -1,0 +1,28 @@
+.nav{
+	background-color: rgb(43, 185, 98);
+	color: rgb(212, 18, 18);
+	list-style-type: none;
+	overflow: hidden;
+}
+
+.nav li{
+	float: right;
+	list-style-type: none;
+}
+
+.nav h1{
+	text-align: center;
+}
+
+.nav li a{
+	color: rgb(212, 18, 18);
+	text-decoration: none;
+	display: block;
+	text-align: right;
+	padding: 14px 16px;
+	font-size: 20px;
+}
+
+.nav li a:hover {
+  background-color: rgb(125, 245, 114);
+}
