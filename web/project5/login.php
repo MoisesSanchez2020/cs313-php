@@ -21,9 +21,7 @@
       <input name="q" placeholder="Search..." type="search">
     </form>
     <ul>
-      <li>
-        <a href="week5.php">Search</a>
-      </li>
+      
       <li>
         <a href="">About</a>
         <ul class="mega-dropdown">
