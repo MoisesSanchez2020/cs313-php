@@ -44,6 +44,16 @@ $course_code = $note_rows[0]['code'];
   }
 
 ?>
+
+
+ <form method="post" action="insert_note.php">
+ <input type="hidden" name="course_id" value="<?php echo $course_id; ?>"
+  <textarea name="note_content"> </textarea>
+  <input type="submit" value="Create Note">
+ 
+ 
+ 
+ </form>
     
 </body>
 </html>
