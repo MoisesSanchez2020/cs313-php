@@ -6,6 +6,7 @@
  }
 
 $course_id = htmlspecialchars($_GET['course_id']);
+
 require('dbConnect.php');
 $db = get_db();
 
