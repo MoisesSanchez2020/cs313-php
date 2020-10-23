@@ -41,7 +41,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC); */
                $code = $course['code'];
                $name = $course['name'];
 
-           echo "<li><p>$code - $name</p></li>";
+           echo "<li><p><a href='course_notes.php?course_id='>$code - $name</a></p></li>";
 
 
 
