@@ -56,6 +56,6 @@ JOIN course c ON n.course_id  = c.id
 WHERE c.code = 'CS 313';   */
 
 
-SELECT c.code, c.name, n.content FROM note n 
+/*SELECT c.code, c.name, n.content FROM note n 
 JOIN course c ON n.course_id  = c.id
-WHERE c.id = 1;   
+WHERE c.id = 1;  */ 
