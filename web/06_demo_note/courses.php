@@ -52,7 +52,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC); */
 
        <ul>
            <?PHP
-           foreach ($courses as $Fertilize)
+           foreach ($Fertilizes as $Fertilize)
            {
                $ProductID = $Fertilize['ProductID'];
                $ProductName = $Fertilize['ProductName'];
