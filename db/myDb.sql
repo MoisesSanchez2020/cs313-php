@@ -4,7 +4,7 @@
 
 --drop table FERTILIZE;
 
-
+/*
 CREATE TABLE Fertilize (
 
  ProductID int,
@@ -57,8 +57,7 @@ INSERT INTO CustomerInfo (ProductosID, Productname, Class, StateUs, County, Livi
 VALUES (131, 'Alien Soil', 'WaterPlants', 'Idaho', 'Idaho falls', '2018');
 
 
-
-
+--SELECT * FROM Fertilize n JOIN CustomerInfo c ON n.ProductosID  = c.id;
 
 
 
@@ -72,10 +71,40 @@ VALUES (131, 'Alien Soil', 'WaterPlants', 'Idaho', 'Idaho falls', '2018');
 ----INSERT INTO  Users (userId, userCode, userZipcode, userNumber)
 --VALUES  (0001, 202010, 94403, 100);--
 
+*/
 
 
 
+CREATE TABLE Member (
+	MemberId serial NOT NULL PRIMARY KEY,
+	FirstName varchar(80) NOT NULL,
+	LastName varchar(80) NOT NULL
+);
 
+CREATE TABLE Member (
+	MemberID serial NOT NULL PRIMARY KEY,
+	UserName varchar(80) UNIQUE NOT NULL,
+	FirstName varchar(80) NOT NULL,
+	LastName varchar(80) NOT NULL
+);
+
+CREATE TABLE Bird (
+	BirdId serial NOT NULL PRIMARY KEY,
+	BirdName varchar(80) UNIQUE NOT NULL
+);
+
+ALTER TABLE Bird
+ADD UNIQUE (BirdName);
+
+CREATE TABLE Sighting (
+	SightingId serial NOT NULL PRIMARY KEY,
+	MemberId int REFERENCES Member(MemberId),
+	BirdId int REFERENCES Bird(BirdId),
+	City varchar(80) NOT NULL,
+	State varchar(80) NOT NULL,
+	Country varchar(80) NOT NULL,
+	SightTime date NOT NULL
+);
 
 
 
