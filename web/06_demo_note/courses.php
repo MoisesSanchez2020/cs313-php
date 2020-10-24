@@ -56,7 +56,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC); */
                     <li><a href="#">jQuery</a></li>
                     <li><a href="#">Other</a>
                         <!-- Third Tier Drop Down -->
-                        <<!--ul>
+                        <!--ul>
                             <li><a href="#">Stuff</a></li>
                             <li><a href="#">Things</a></li>
                             <li><a href="#">Other Stuff</a></li>
@@ -66,8 +66,8 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC); */
                 </li>
             </ul>-->
             </li>
-            <li><a href="#">SOIL</a></li>
-            <li><a href="#">FERTILIZE</a></li>
+            <li><a href="#">Sol</a></li>
+            <li><a href="#">Fertileze</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">LOG-IN</a></li>
         </ul>
