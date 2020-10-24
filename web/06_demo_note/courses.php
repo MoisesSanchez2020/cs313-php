@@ -37,34 +37,6 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC); */
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">IQGreen</a>
-            <!-- First Tier Drop Down -->
-            <!--<ul>
-                <li><a href="#">Themes</a></li>
-                <li><a href="#">Plugins</a></li>
-                <li><a href="#">Tutorials</a></li>
-            </ul>        
-            </li>
-            <li><a href="#">Product</a>
-            <!-- First Tier Drop Down -->
-            <!--<ul>
-                <li><a href="#">Resources</a></li>
-                <li><a href="#">Links</a></li>
-                <li><a href="#">Tutorials</a>
-            	<!-- Second Tier Drop Down 
-                <ul>-->
-                    <!--<li><a href="#">HTML/CSS</a></li>
-                    <li><a href="#">jQuery</a></li>
-                    <li><a href="#">Other</a>
-                        <!-- Third Tier Drop Down -->
-                        <!--ul>
-                            <li><a href="#">Stuff</a></li>
-                            <li><a href="#">Things</a></li>
-                            <li><a href="#">Other Stuff</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                </li>
-            </ul>-->
             </li>
             <li><a href="#">Sol</a></li>
             <li><a href="#">Fertileze</a></li>
@@ -80,13 +52,15 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC); */
 
        <ul>
            <?PHP
-           foreach ($courses as $course)
+           foreach ($courses as $Fertilize)
            {
-               $id = $course['id'];
-               $code = $course['code'];
-               $name = $course['name'];
+               $ProductID = $Fertilize['ProductID'];
+               $ProductName = $Fertilize['ProductName'];
+               $ProductType = $Fertilize['ProductType'];
+               $ProductPrice = $Fertilize['ProductPrice'];
+               $ProductDescription = $Fertilize['ProductDescription'];
 
-           echo "<li><p><a href='course_notes.php?course_id=$id'>$code - $name</a></p></li>";
+           echo "<li><p><a href='course_notes.php?ProductID=$ProductID'>$ProductName - $ProductName - $ProductType - $ProductPrice - $ProductDescription</a></p></li>";
 
 
 
