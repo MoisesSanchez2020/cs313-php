@@ -1,6 +1,6 @@
 <?php
 
-   $Fertilize_ProductID = htmlspecialchars($_POST['Ferttilize_ProductID']);
+   $Fertilize_ProductID = htmlspecialchars($_POST['Fertilize_ProductID']);
    $ProductDescription = htmlspecialchars($_POST['CustomerInfo_ProductDecription']);
  
 
