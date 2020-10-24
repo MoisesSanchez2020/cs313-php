@@ -11,7 +11,7 @@ $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC); */
 
 
-    $query  = 'SELECT id, code, name FROM course';
+    $query  = 'SELECT ProductID, ProductName, name FROM Fertilize';
     $stmt = $db->prepare($query);
     $stmt->execute();
     $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
