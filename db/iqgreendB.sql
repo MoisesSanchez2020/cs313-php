@@ -71,12 +71,3 @@ VALUES (131, 'Alien Soil', 'WaterPlants', 'Idaho', 'Idaho falls', '2018');
 
 ----INSERT INTO  Users (userId, userCode, userZipcode, userNumber)
 --VALUES  (0001, 202010, 94403, 100);--
-
-
-
-
-
-
-
-
-

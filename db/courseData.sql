@@ -23,18 +23,6 @@ INSERT INTO note(course_id, content) VALUES (2, 'I like neural networks.');
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 -- HOW TO SELECT DATA
 
 
@@ -43,7 +31,6 @@ INSERT INTO note(course_id, content) VALUES (2, 'I like neural networks.');
 /*  SELECT * FROM note n 
 JOIN course c ON n.course_id  = c.id
 WHERE c.code = 'CS 313';  */
-
 
 
 /* SELECT n.content FROM note n 
