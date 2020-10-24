@@ -14,7 +14,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC); */
     $query  = 'SELECT ProductID, ProductName, name FROM Fertilize';
     $stmt = $db->prepare($query);
     $stmt->execute();
-    $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $Fertilizes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
    
 
@@ -52,7 +52,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC); */
 
        <ul>
            <?PHP
-           foreach ($courses as $Fertilize)
+           foreach ($Fertilizes as $Fertilize)
            {
                $ProductID = $Fertilize['ProductID'];
                $ProductName = $Fertilize['ProductName'];
