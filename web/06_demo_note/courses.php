@@ -28,7 +28,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC); */
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Courses</title>
+    <title>IQGREEN</title>
 </head>
 <body>
 
@@ -73,7 +73,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC); */
         </ul>
     </nav>
   <h1>IQGREEN</h1>
-<p> THis Project ia a demo of PHP Injection to the DOM - SQL DATA BASE implementation</p>
+<p> THis Project is a demo of PHP Injection to the DOM - SQL DATA BASE implementation</p>
 </div>
 
       <h1>SOIL Classification</h1>
