@@ -48,7 +48,7 @@ $course_code = $note_rows[0]['code'];
             <li><a href="#">LOG-IN</a></li>
         </ul>
     </nav>
-   <h1>Product Request <?php echo $course_code;?></h1>
+   <h1>Product Request <?php echo $Fertilize_ProductID;?></h1>
 
   <?php
   foreach ($note_rows as $note_row)
@@ -61,7 +61,7 @@ $course_code = $note_rows[0]['code'];
 
 
  <form method="post" action="insert_note.php">
- <input type="hidden" name="course_id" value="<?php echo $course_id; ?>">
+ <input type="hidden" name="Fertilize_ProductID" value="<?php echo $Fertilize_ProductID; ?>">
  
   <textarea name="note_content"></textarea>
   <input type="submit" value="Create Note">
