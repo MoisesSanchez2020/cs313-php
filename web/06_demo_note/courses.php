@@ -60,7 +60,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC); */
                $ProductPrice = $Fertilize['ProductPrice'];
                $ProductDescription = $Fertilize['ProductDescription'];
 
-           echo "<li><p><a href='course_notes.php?ProductID=$ProductID'>$ProductName - $ProductName - $ProductType - $ProductPrice - $ProductDescription</a></p></li>";
+           echo "<li><p><a href='course_notes.php?Fertilize_ProductID=$ProductID'>$ProductName - $ProductName - $ProductType - $ProductPrice - $ProductDescription</a></p></li>";
 
 
 
