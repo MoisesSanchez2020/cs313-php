@@ -1,7 +1,7 @@
 <?php
 
-   $course_id = htmlspecialchars($_POST['course_id']);
-   $content = htmlspecialchars($_POST['note_content']);
+   $Fertilize_ProductID = htmlspecialchars($_POST['Ferttilize_ProductID']);
+   $ProductDescription = htmlspecialchars($_POST['CustomerInfo_ProductDecription']);
  
 
 
@@ -13,12 +13,12 @@
    $db = get_db();
    
    // FROM THE READING:
-   $stmt = $db->prepare('INSERT INTO note(course_id, content) VALUES (:course_id, :content);');
-   $stmt->bindValue(':course_id', $course_id, PDO::PARAM_INT);
-   $stmt->bindValue(':content', $content, PDO::PARAM_STR);
+   $stmt = $db->prepare('INSERT INTO note(Fertilize_ProductID, ProductDescription) VALUES (:Fertilize_ProductID, :ProductDescription);');
+   $stmt->bindValue(':Fertilize_ProductID', $Fertilize_ProductID, PDO::PARAM_INT);
+   $stmt->bindValue(':ProductDescription', $ProductDescription, PDO::PARAM_STR);
    $stmt->execute();
    
-   $new_page = "course_note.php?course_id=$course_id";
+   $new_page = "course_note.php?Fertilize_ProductID=$Fertilize_ProductID";
 
    header("Location: $new_page");
    die();
