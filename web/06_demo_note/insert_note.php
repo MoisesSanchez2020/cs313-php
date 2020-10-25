@@ -1,6 +1,6 @@
 <?php
 
-$course_id = htmlspecialchars($_POST['course_id']);
+$course_ProductID = htmlspecialchars($_POST['course_ProductID']);
 $content = htmlspecialchars($_POST['note_content']);
 
 require('dbConnect.php');
