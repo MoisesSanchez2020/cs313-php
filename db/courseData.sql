@@ -20,9 +20,9 @@ CREATE TABLE note (
     content text NOT NULL
 );  
 
-INSERT INTO course(code, name, ProductID) VALUES ('CS 313', 'Web Engenieering II');
-INSERT INTO course(code, name) VALUES ('CS 450', 'Machine Learnig and Data Minig'), ('CS 246', 'Software Design and Development'),
-('37485','Dr.Earth Citrus', 'Organic  Fertilize');
+INSERT INTO course(code, name, ProductID) VALUES ('CS 313', 'Dr.Earth Citrus','37485','Organic  Fertilize');
+INSERT INTO course(code, name) VALUES ('CS 450', 'Machine Learnig and Data Minig'), ('CS 246', 'Software Design and Development');
+
 
 
 INSERT INTO note(course_id, content) VALUES (1, 'Today We are learning about dbs');
