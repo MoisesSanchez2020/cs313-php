@@ -9,7 +9,7 @@ $db = get_db();
 // $stmt->execute();
 // $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$query = 'SELECT , code, name FROM course';
+$query = 'SELECT id, code, name FROM course';
 $stmt = $db->prepare($query);
 $stmt->execute();
 $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
