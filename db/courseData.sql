@@ -62,7 +62,7 @@ FOREIGN KEY (ProductosID) REFERENCES ClientesInfo(ProductosID)
 
 
 
-INSERT INTO Fertilize (ProductID, ProductName, ProductType, ProductPrice ,ProductDescription)
+INSERT course (ProductID, ProductName, ProductType, ProductPrice ,ProductDescription)
 VALUES (37485, 'Dr.Earth Citrus', 'Organic  Fertilize', 9.99, 'Citrus soil for oranges');
 
  INSERT INTO Fertilize (ProductID, ProductName, ProductType, ProductPrice , ProductDescription)
