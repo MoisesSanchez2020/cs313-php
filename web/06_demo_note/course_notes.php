@@ -23,8 +23,8 @@ $course_code = $note_rows[0]['code'];
 <html>
 <head>
 <link rel="stylesheet" href="style.css">
-    <title>IQGREEN Notes</title>
-	<title>Course Notes</title>
+
+	<title>IQGREEN PRODUCT REQUEST</title>
 </head>
 <body>
 <div id="container">
@@ -43,7 +43,7 @@ $course_code = $note_rows[0]['code'];
 </div>
 
 
-<h1>Course Notes for <?php echo $course_code;?></h1>
+<h1>IQGREEN PRODUCT REQUEST <?php echo $course_code;?></h1>
 
 <?php
 foreach ($note_rows as $note_row)
