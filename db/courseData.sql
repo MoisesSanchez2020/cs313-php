@@ -27,9 +27,9 @@ VALUES ('30032', 'Machine Learnig and Data Minig'), ('30304', 'Software Design a
 
 
 
-INSERT INTO note(course_id, content) VALUES (1, 'Today We are learning about dbs');
-INSERT INTO note(course_id, content) VALUES (1, 'Inner joins are intersting');
-INSERT INTO note(course_id, content) VALUES (2, 'I like neural networks.');
+INSERT INTO note(course_id, content) VALUES (1, 'Test1');
+INSERT INTO note(course_id, content) VALUES (1, 'Test2');
+INSERT INTO note(course_id, content) VALUES (2, 'Test3');
 
 /*
 
