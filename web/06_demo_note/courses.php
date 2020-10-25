@@ -21,6 +21,19 @@ $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	<title>Courses</title>
 </head>
 <body>
+<div id="container">
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">IQGreen</a>
+            </li>
+            <li><a href="#">Sol</a></li>
+            <li><a href="#">Fertileze</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">LOG-IN</a></li>
+        </ul>
+    </nav>
+</div>
 	<h1>Courses</h1>
 
 	<ul>

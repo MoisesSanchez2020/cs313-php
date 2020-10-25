@@ -22,9 +22,27 @@ $course_code = $note_rows[0]['code'];
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="style.css">
+    <title>IQGREEN Notes</title>
 	<title>Course Notes</title>
 </head>
 <body>
+<div id="container">
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">IQGreen</a>
+        
+            </li>
+            <li><a href="#">Sol</a></li>
+            <li><a href="#">Fertileze</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">LOG-IN</a></li>
+        </ul>
+    </nav>
+</div>
+
+
 <h1>Course Notes for <?php echo $course_code;?></h1>
 
 <?php
