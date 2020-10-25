@@ -21,6 +21,7 @@ $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="demo.css">
     <title>IQGREEN</title>
 <body>
 <div id="container">
@@ -51,7 +52,46 @@ foreach ($courses as $course)
 	echo "<li><p><a href='course_notes.php?course_id=$id'>$code - $name - $ProductID</a></p></li>";
 }
 ?>		
-	</ul>
+    </ul>
+    
+
+    <div id="form-main">
+
+  <div id="form-div">
+  
+    <form  class="form" id="form1"  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+    <h2>Product Search</h2>
+
+      <p class="name">
+       <h3>Fertilizer</h3>   
+      <button class="button button1" id="button-blue">Search</button>
+      <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="" id="name" />
+      </p>
+     
+
+
+      <p class="name">
+       <h3>Soil</h3>
+      <button class="button button1" id="button-blue">Search</button>
+        <input name="email" type="text" class="validate[required,custom[onlyLetter],length[0,100]]  feedback-input" id="email" placeholder="" />
+      </p>
+      
+
+
+      <p class="name">
+          <h3>Pest Control</h3>
+      <button class="button button1" id="button-blue" >Search</button>
+      <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="" id="name" />
+        <!--<textarea name="text" class="validate[required,custom[onlyLetter],length[0,100]]  feedback-input" id="comment" placeholder="Comment" ></textarea>-->
+      </p>
+     
+      
+      <div class="submit">
+        <input type="submit" value="IQGreen" id="button-green"/>
+        <div class="ease"></div>
+      </div>
+    </form>
+  </div>
 
 </body>
 </html>
