@@ -2,6 +2,7 @@
 
 $course_id = htmlspecialchars($_POST['course_id']);
 $content = htmlspecialchars($_POST['note_content']);
+$ProductName = htmlspecialchars($_POST['course_ProductName']);
 
 require('dbConnect.php');
 $db = get_db();
