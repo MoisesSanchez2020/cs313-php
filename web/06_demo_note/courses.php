@@ -29,14 +29,14 @@ $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <li><a href="#">Home</a></li>
             <li><a href="#">IQGreen</a>
             </li>
-            <li><a href="#">Sol</a></li>
-            <li><a href="#">Fertileze</a></li>
+            <li><a href="course_notes.php">Sol</a></li>
+            <li><a href="insert_note.php">Fertilezer</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="#">LOG-IN</a></li>
         </ul>
     </nav>
 </div>
-	<h1>Courses</h1>
+	<h1>IQGREEN</h1>
 
 	<ul>
 <?php
@@ -45,9 +45,10 @@ foreach ($courses as $course)
 {
 	$id = $course['id'];
 	$code = $course['code'];
-	$name = $course['name'];
+    $name = $course['name'];
+    $ProductID = $course['ProductID'];
 
-	echo "<li><p><a href='course_notes.php?course_id=$id'>$code - $name</a></p></li>";
+	echo "<li><p><a href='course_notes.php?course_id=$id'>$code - $name - $ProductID</a></p></li>";
 }
 ?>		
 	</ul>

@@ -1,9 +1,16 @@
 
-/*
+
 CREATE TABLE course (
 id SERIAL PRIMARY KEY,
 code VARCHAR(25) NOT NULL UNIQUE,
-name  VARCHAR(100) NOT NULL
+name  VARCHAR(100) NOT NULL,
+ ProductID int,
+ ProductName varchar(255),
+ ProductType varchar(255),
+ ProductPrice int,
+ ProductDescription varchar(255)
+
+
 
 );
 
@@ -11,8 +18,8 @@ CREATE TABLE note (
     id SERIAL PRIMARY KEY,
     course_id INT NOT NULL REFERENCES course(id),
     content text NOT NULL
-);  */
-/*
+);  
+
 INSERT INTO course(code, name) VALUES ('CS 313', 'Web Engenieering II');
 INSERT INTO course(code, name) VALUES ('CS 450', 'Machine Learnig and Data Minig'), ('CS 246', 'Software Design and Development');
 
@@ -21,7 +28,7 @@ INSERT INTO note(course_id, content) VALUES (1, 'Today We are learning about dbs
 INSERT INTO note(course_id, content) VALUES (1, 'Inner joins are intersting');
 INSERT INTO note(course_id, content) VALUES (2, 'I like neural networks.');
 
-*/
+
 
 ---IQGRENN DATABASE--
 --drop table FERTILIZE;
