@@ -21,9 +21,9 @@ CREATE TABLE note (
 );  
 
 INSERT INTO course(code, name, ProductID, ProductName, ProductType, ProductPrice, ProductDescription)
-VALUES ('CS 313', 'Dr.Earth Citrus','37485','Organic  Fertilize');
+VALUES ('3003', 'Dr.Earth Citrus','37485','Organic  Fertilize');
 INSERT INTO course(code, name, ProductID, ProductName, ProductType, ProductPrice, ProductDescription) 
-VALUES ('CS 450', 'Machine Learnig and Data Minig'), ('CS 246', 'Software Design and Development');
+VALUES ('30032', 'Machine Learnig and Data Minig'), ('30304', 'Software Design and Development');
 
 
 
