@@ -1,27 +1,46 @@
 <?php
-   require('dbConnect.php');
+require('dbConnect.php');
 $db = get_db();
 
+// From the reading:
+// $stmt = $db->prepare('SELECT * FROM table WHERE id=:id AND name=:name');
+// $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+// $stmt->bindValue(':name', $name, PDO::PARAM_STR);
+// $stmt->execute();
+// $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// FROM THE READING:
-/* $stmt = $db->prepare('SELECT * FROM table WHERE id=:id AND name=:name');
-$stmt->bindValue(':id', $id, PDO::PARAM_INT);
-$stmt->bindValue(':name', $name, PDO::PARAM_STR);
+$query = 'SELECT id, code, name FROM course';
+$stmt = $db->prepare($query);
 $stmt->execute();
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC); */
-
-
-    $query  = 'SELECT ProductID, ProductName, name FROM Fertilize';
-    $stmt = $db->prepare($query);
-    $stmt->execute();
-    $Fertilizes = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-   
+$courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Courses</title>
+</head>
+<body>
+	<h1>Courses</h1>
 
+	<ul>
+<?php
 
+foreach ($courses as $course)
+{
+	$id = $course['id'];
+	$code = $course['code'];
+	$name = $course['name'];
 
+	echo "<li><p><a href='course_notes.php?course_id=$id'>$code - $name</a></p></li>";
+}
+?>		
+	</ul>
+
+</body>
+</html>
+
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,23 +70,23 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC); */
       <h1>SOIL Classification</h1>
 
        <ul>
-           <?PHP
-           foreach ($Fertilizes as $Fertilize)
-           {
-               $ProductID = $Fertilize['ProductID'];
-               $ProductName = $Fertilize['ProductName'];
-               $ProductType = $Fertilize['ProductType'];
-               $ProductPrice = $Fertilize['ProductPrice'];
-               $ProductDescription = $Fertilize['ProductDescription'];
+          // 
+           //foreach ($Fertilizes as $Fertilize)
+          // {
+               //$ProductID = $Fertilize['ProductID'];
+               //$ProductName = $Fertilize['ProductName'];
+               //$ProductType = $Fertilize['ProductType'];
+               //$ProductPrice = $Fertilize['ProductPrice'];
+              // $ProductDescription = $Fertilize['ProductDescription'];
 
-           echo "<li><p><a href='course_notes.php?Fertilize_ProductID=$ProductID'>$ProductName - $ProductName - $ProductType - $ProductPrice - $ProductDescription</a></p></li>";
+           //echo "<li><p><a href='course_notes.php?Fertilize_ProductID=$ProductID'>$ProductName - $ProductName - $ProductType - $ProductPrice - $ProductDescription</a></p></li>";
 
 
 
            }
           
           
-       ?>
+     
        </ul>
     
 </body>
