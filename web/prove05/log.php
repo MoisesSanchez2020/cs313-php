@@ -54,7 +54,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
 	<title>Bird Watcher</title>
 </head>
 <body>
@@ -73,19 +73,52 @@
 
 		<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 			<div class="leftcol">
+				<label for="birdid">Bird Name:</label><br>
+			</div>
+			<div class="rightcol">
+				<select name="birdid" id="birdid">
+					
+					<?php
+					foreach ($db->query('SELECT birdname FROM Bird') as $row)
+					{
+						echo '<option value="' . $row['birdname'] . '">' . $row['birdname'] . '</option>';
+					}
+					?>
+				</select>
+			</div>
+
+			<div class="leftcol">
+				<label for="memberid">Username:</label><br>
+			</div>
+			<div class="rightcol">
+				<select name="memberid" id="memberid">
+					
+					<?php
+					foreach ($db->query('SELECT username FROM Member') as $row)
+					{
+						echo '<option value="' . $row['username'] . '">' . $row['username'] . '</option>';
+					}
+					?>
+				</select>
+			</div>
+
+<!--
+			<div class="leftcol">
 				<label for="memberid">Username:</label><br>
 			</div>
 			<div class="rightcol">
 				<input type="text" name="memberid" id="memberid" placeholder="user123"><br>
 			</div>
+		-->
 			
-
+<!--
 			<div class="leftcol">
 				<label for="birdid">Bird Name:</label><br>
 			</div>
 			<div class="rightcol">
 				<input type="text" name="birdid" id="birdid" placeholder="Blue Jay"><br>
 			</div>
+		-->
 			
 
 			<div class="leftcol">

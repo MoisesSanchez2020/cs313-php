@@ -28,7 +28,9 @@
 }
 
 .home{
-
+	justify-content: center;
+  	align-items: center;
+	text-align: center;
 }
 
 .search{
@@ -78,7 +80,7 @@
   	margin-top: 6px;
 }
 
-.log input[type=text]{
+.log input[type=text], select{
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
