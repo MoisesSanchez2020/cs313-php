@@ -1,9 +1,4 @@
-<?php
 
-require('funtcion.php');
-$db = get_db();
-
-?>
 
 
 <!DOCTYPE html>
