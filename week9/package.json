@@ -1,0 +1,27 @@
+{
+  "name": "week9",
+  "version": "1.0.0",
+  "description": "\"this is the week 9 assigment\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoisesSanchez2020/Postal-Rate-Calculator.git"
+  },
+  "author": "Moises Sanchez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MoisesSanchez2020/Postal-Rate-Calculator/issues"
+  },
+  "homepage": "https://github.com/MoisesSanchez2020/Postal-Rate-Calculator#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
